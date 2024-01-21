@@ -1,5 +1,6 @@
 from flask import Flask, request, make_response, jsonify
 from flask_migrate import Migrate
+from flask_cors import CORS
 
 
 from models import db, Pizza, RestaurantPizza, Restaurant
@@ -9,6 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///restaurant.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
+CORS(app)
 migrate = Migrate(app)
 
 db.init_app(app)
