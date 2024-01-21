@@ -2,7 +2,7 @@ from flask import Flask, request, make_response, jsonify
 from flask_migrate import Migrate
 
 
-from server.models import db, Pizza, RestaurantPizza, Restaurant
+from models import db, Pizza, RestaurantPizza, Restaurant
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///restaurant.db'
