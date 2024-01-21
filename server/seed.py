@@ -1,4 +1,4 @@
-from models import Pizza, Restaurant, RestaurantPizza
+from server.models import Pizza, Restaurant, RestaurantPizza
 from app import db, app
 
 pizzas = [{
