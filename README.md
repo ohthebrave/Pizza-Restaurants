@@ -1,22 +1,22 @@
-## Pizza Restaurants
+# Pizza Restaurants
 
-Add React frontend application, so you can test if your API is working. 
+A simple restaurant React application, a flask application to test if API is working. 
 
-# Models
+## Models
 
 You need to create the following relationships:
 - A `Restaurant` has many `Pizza`s through `RestaurantPizza`
 - A `Pizza` has many `Restaurant`s through `RestaurantPizza`
 - A `RestaurantPizza` belongs to a `Restaurant` and belongs to a `Pizza`
 
-# Validations
+## Validations
 Add validations to the `RestaurantPizza` model:
 - must have a `price` between 1 and 30
 Routes
 Set up the following routes. Make sure to return JSON data in the format specified along with the appropriate HTTP verb.
  
 
-# GET /restaurants:
+## GET /restaurants:
 
 Return JSON data in the format below:
 [
@@ -32,7 +32,7 @@ Return JSON data in the format below:
   }
 ]
 
-# GET /restaurants/:id:
+## GET /restaurants/:id:
 
 If the `Restaurant` exists, return JSON data in the format below:
 {
@@ -59,7 +59,7 @@ If the `Restaurant` does not exist, return the following JSON data, along with t
 }
  
 
-# DELETE /restaurants/:id:
+## DELETE /restaurants/:id:
 
 If the `Restaurant` exists, it should be removed from the database, along with any `RestaurantPizza`s that are associated with it (a `RestaurantPizza` belongs to a `Restaurant`, so you need to delete the `RestaurantPizza`s before the `Restaurant` can be deleted).
 After deleting the `Restaurant`, return an _empty_ response body, along with the appropriate HTTP status code.
@@ -70,7 +70,7 @@ If the `Restaurant` does not exist, return the following JSON data, along with t
 }
  
 
-# GET /pizzas:
+## GET /pizzas:
 
 Return JSON data in the format below:
 [
@@ -86,7 +86,7 @@ Return JSON data in the format below:
   }
 ]
 
-# POST /restaurant_pizzas:
+## POST /restaurant_pizzas:
 
 This route should create a new `RestaurantPizza` that is associated with an existing `Pizza` and `Restaurant`. It should accept an object with the following properties in the body of the request:
 {
