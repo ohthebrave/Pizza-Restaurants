@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Restaurant() {
   const [restaurant, setRestaurant] = useState([]);
@@ -30,7 +31,7 @@ export default function Restaurant() {
     <div>
         {restaurant?.map(rest => (
             <ul key={rest.id}>
-            <li><a  href="http://">{rest.name}</a></li>
+                <Link to={'/rest'} >{rest.name}</Link>
             </ul>
         ))}
     </div>

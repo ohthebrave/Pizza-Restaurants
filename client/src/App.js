@@ -1,21 +1,18 @@
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import img from "./assets/pizza.avif"
-import Restaurant from "./components/Restaurant";
+import React from 'react';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Main from './components/Main';
+import RestaurantPizza from './components/RestaurantPizza';
 
-
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Header restaurantName="Your Restaurant" />
-      <Restaurant/>
-      <Banner
-        title="Fast food, made fresh, right to your door"
-        subtitle="Explore Our Menu"
-        imageURL= {img}
-      />
-    </div>
-  );
+    <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Main/>}/>
+            <Route path="/rest" element={<RestaurantPizza/>} />
+          </Routes>
+        </BrowserRouter>
+        
+      </div>
+  )
 }
-
-export default App;

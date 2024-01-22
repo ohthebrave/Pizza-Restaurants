@@ -1,5 +1,5 @@
 from server.models import Pizza, Restaurant, RestaurantPizza
-from app import db, app
+from server.app import db, app
 
 pizzas = [{
     "id": 1,
