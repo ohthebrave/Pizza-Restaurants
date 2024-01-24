@@ -1,6 +1,15 @@
 # Pizza Restaurants
 
-A simple restaurant React application, a flask application to test if API is working. 
+A simple restaurant React application that contains a connected flask backend to a React frontend.
+
+# Backend
+
+create: python3 -m venv env
+activate: source env/bin/activate
+
+### live link
+
+* The live link for the backend https://restaurant-api-rpmo.onrender.com/
 
 ## Models
 
